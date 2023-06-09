@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="joke"></div>
+    <button onclick="generateJoke()">Generate Joke</button>
+    <script>
+        /*-- function generateJoke(){
+            var data = fetch("https://official-joke-api.appspot.com/random_joke")
+        data.then((result)=>{
+            result.json().then((response)=>{
+                var element = document.getElementById("joke")
+                element.innerHTML = `Setup: ${response.setup} <br> Punchline: ${response.punchline}`   
+            })
+          
+        })
+        } --*/
+        async function generateJoke(){
+            var data =await fetch("https://official-joke-api.appspot.com/random_joke")
+           
+            var jsondata =await data.json();
+            console.log(jsondata);
+        }
+        
+    </script>
+</body>
+</html>
