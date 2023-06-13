@@ -1,0 +1,136 @@
+import About from "./components/About";
+
+var fname = "Adfar";
+var lname = "Rasheed";
+var age= 25;
+var skills = ["HTML","CSS","JS","React"]
+var person = {
+  name:"Adfar",
+  age:25,
+  skills: ["HTML","CSS","JS","React"]
+
+}
+function App() {
+  return (
+    <div>
+      {skills.map((item,index)=>{
+        return <li>{item}</li>
+      })}
+      <h1>Adfar Rasheed</h1>
+      <About fname={fname} lname={lname} age={age} skills={skills} person={person}/>
+      
+      
+      {header}
+      {main}
+      
+      
+    </div>
+  );
+}
+const myStyle={
+  color:"red",
+  backgroundColor:"grey"
+}
+const header = (
+  <header style={myStyle}>
+    <h1>React Introduction</h1>
+    <p>23 day to go</p>
+    <small>Adfar Rashid</small>
+  </header>
+)
+const main = (
+  <main style={myStyle}>
+    <h1>React Introduction</h1>
+    <p>Components</p>
+    <h4>Welcome to react</h4>
+  </main>
+)
+export default App;
+
+
+
+
+import React from 'react'
+var arr = [1,2,3,4,5]
+export default function Array() {
+  return (
+    <div>
+        {arr.map((item,index)=>{
+            return (
+                <li key={index}>{item}</li>
+            )
+        })}
+    </div>
+  )
+}
+
+
+
+import React from 'react'
+var arr = [
+    ["Skill","Rating"],
+    ["Html",10],
+    ["css",9],
+    ["JS",8],
+    ["React",7]
+]
+export default function Array() {
+  return (
+    <div>
+        <table style={{border:"2px solid",borderCollapse:"collapse"}}>
+            <tr style={{border:"2px solid"}}>
+                {arr[0].map((item,index)=>{
+                    return (
+                        <th style={{border:"2px solid"}}>{item}</th>
+                    )
+                })}
+            </tr>
+            {arr.slice(1).map((item,index)=>{
+                return (
+                    <tr style={{border:"2px solid"}}>{item.map((item1,index1)=>{
+                        return (
+                            <td style={{border:"2px solid"}}>{item1}</td>
+                        )
+                    })}</tr>
+                )
+            })}
+        </table>
+    </div>
+  )
+}
+
+
+import React from 'react'
+var arr1 = [["Name","age","Skills"],
+    {name:"aman",age:25,skill:["css",10,"Html",10]},
+{name:"abc",age:20,skill:["Kotlin",10,"Java",10]}
+]
+export default function Array() {
+  return (
+    <div>
+        <table style={{border:"2px solid red",borderCollapse:"collapse"}}>
+            <tr  style={{border:"2px solid red"}}>
+                {arr1[0].map((item,index)=>{
+                    return (
+                        <th style={{border:"2px solid red"}}>{item}</th>
+                    )
+                })}
+            </tr>
+            {arr1.slice(1).map((item,index)=>{
+                return (
+                    <tr  style={{border:"2px solid red"}}>
+                        <td  style={{border:"2px solid red"}}>{item.name}</td>
+                        <td style={{border:"2px solid red"}}>{item.age}</td>
+                        <td style={{border:"2px solid red"}}>{item.skill.map((item1,index1)=>{
+                            return (
+                                <li>{item1}</li>
+                            )
+                        })}</td>
+                    </tr>
+                )
+            })}
+        </table>
+    </div>
+  )
+}
+
