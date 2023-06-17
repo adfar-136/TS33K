@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.minicontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px red solid;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+.topsection{
+    display: flex;
+  
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
