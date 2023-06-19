@@ -9,6 +9,7 @@ export default function Project1() {
             color:'black'})
     const [btnText,setBtnText] = useState("Dark")
     const [btnText1,setBtnText1] = useState("Dark")
+    const [text,setText] = useState("")
     const toggle =()=>{
         if(myStyle.color === "white"){
             setMystyle({
@@ -39,9 +40,28 @@ export default function Project1() {
             setBtnText1("Light")
         }
     }
+    const onchangee=(event)=>{
+        setText(event.target.value)
+    }
+    const onLower=()=>{
+        const newText = text.toLowerCase()
+        setText(newText)
+    }
+    const onUpper=()=>{
+        const newText = text.toUpperCase()
+        setText(newText)
+    }
+    const onClear=()=>{
+        setText("")
+    }
+    const onCopy=()=>{
+        var text = document.getElementById("box")
+       text.select()
+       navigator.clipboard.writeText(text.value);
+    }
   return (
-    <div>
-        <div style={myStyle}  className="container">
+    <div  style={myStyle} >
+        <div className="container">
             <h1>Welcome</h1>
             <button onClick={toggle}>{btnText}</button>
         </div>
@@ -53,7 +73,20 @@ export default function Project1() {
                 <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, saepe!</div>
                 <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, saepe!</div>
                 <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, saepe!</div>
+        </div>
+        <div className="textcontainer">
+            <div className="textarea">
+               <textarea id='box' cols="70" rows="10" value={text}
+               onChange={(event)=>{onchangee(event)}}
+               ></textarea>
             </div>
+            <div className="btncontainer">
+                <button onClick={onLower}>LowerCase</button>
+                <button onClick={onUpper}>UpperCase</button>
+                <button onClick={onCopy}>Copy</button>
+                <button onClick={onClear}>Clear</button>
+            </div>
+        </div>
     </div>
   )
 }
