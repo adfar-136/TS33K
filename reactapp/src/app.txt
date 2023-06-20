@@ -134,3 +134,21 @@ export default function Array() {
   )
 }
 
+
+import React, { useState } from 'react'
+import "./App.css"
+
+
+export default function App() {
+  const [isActive,setIsActive] = useState(false)
+  const toggle =()=>{
+     setIsActive(!isActive)
+  }
+  return (
+    <div className='mainDiv'>
+      <h1 className={isActive?"active":"inactive"}>Hello welcome</h1>
+      <button onClick={toggle}>Toggle</button>
+      
+    </div>
+  )
+}

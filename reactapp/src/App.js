@@ -1,15 +1,14 @@
 import React from 'react'
-import ShouldComponentUpdate from './components/ShouldComponentUpdate'
-// import Project1 from './components/Project1/Project1'
-// import Lifecyclemethods from './components/Lifecyclemethods'
-// import StaticGDSFP from './components/StaticGDSFP'
 
+import FunctionEffect from './components/FunctionEffect'
+import Classeffect from './components/Classeffect'
 export default function App() {
+ 
   return (
+
     <div>
-      {/* <Lifecyclemethods/>
-      <StaticGDSFP fName = "Adfar hmgvhghgf"/> */}
-      <ShouldComponentUpdate/>
+      <Classeffect/>
+      <FunctionEffect/>
     </div>
   )
 }
