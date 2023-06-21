@@ -1,14 +1,12 @@
 import React from 'react'
+import Comp1 from './components/Context/Comp1'
 
-import FunctionEffect from './components/FunctionEffect'
-import Classeffect from './components/Classeffect'
 export default function App() {
  
   return (
 
     <div>
-      <Classeffect/>
-      <FunctionEffect/>
+     <Comp1/>
     </div>
   )
 }
