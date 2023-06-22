@@ -1,10 +1,18 @@
 import React from 'react'
 import Comp3 from './Comp3'
-
-export default function Comp2(props) {
+import {MyContext} from "../../Contextstate"
+export default function Comp2() {
   return (
     <div>
-        <Comp3 count={props.cstate} setCount={props.Stateset}/>
+      <MyContext.Consumer>
+        {({myState,setMyState})=>{
+        return (  <div>
+            <h1>State : {myState}</h1>
+            <button onClick={()=>setMyState("Adfar")}>Update</button>
+          </div>
+        )
+        }}
+      </MyContext.Consumer>
     </div>
   )
 }

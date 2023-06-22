@@ -1,9 +1,21 @@
 import React from 'react'
-
-export default function Comp3(props) {
+import {FirstName, LastName,MiddleName} from "../../App"
+export default function Comp3() {
   return (
     <div>
-        <button onClick={()=>props.setCount(props.count+1)}>Click me</button>
+      <FirstName.Consumer>
+        {(fname)=>{
+            return (<LastName.Consumer>
+              {(lname) => {
+                return (<MiddleName.Consumer>
+                  {(mname)=>{
+                     return (<h1>My Full Name is {fname} {mname} {lname}</h1>)
+                  }}
+                </MiddleName.Consumer>)
+              }}
+            </LastName.Consumer>)
+        }}
+      </FirstName.Consumer>
     </div>
   )
 }
