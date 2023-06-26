@@ -1,11 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Header from "./Header";
+import React from 'react'
 
 export default function Home() {
   return (
-   <div>
-    <Header/>
-   </div>
-  );
+    <div>
+      <h1>hello welcome to home page</h1>
+      <h2>Home component</h2>
+    </div>
+  )
 }
