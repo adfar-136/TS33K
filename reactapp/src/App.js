@@ -1,20 +1,29 @@
 import React from 'react'
-import useCounter from './components/CustomHooks/useCounter'
-import Like from './components/Generalcomponents/Like'
-import Unlike from './components/Generalcomponents/Unlike'
+import Counter from './components/ErrorBoundary/Counter'
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
+import Todo from "./components/CustomHooks/Todo"
 
 export default function App() {
-  const {count,increment,decrement} = useCounter()
-
-  console.log(count)
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={increment}>Add</button>
-      <button onClick={decrement}>Minus</button>
+      <ErrorBoundary>
+        <Counter/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Counter/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Counter/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Counter/>
+      </ErrorBoundary>
+      <Todo/>
+      
 
-      <Like/>
-      <Unlike/>
+      
     </div>
+
+    
   )
 }
