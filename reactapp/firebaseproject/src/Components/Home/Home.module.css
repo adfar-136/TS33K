@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right,#ff00ff,#ffea80);
+}
+.container li,.link{
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    padding: 25px;
+    background-color: #9900ff;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.container li:hover{
+    background-color: #2a2eff;;
+}
+.container .link:hover{
+    background-color: #2a2eff;;
+}
