@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(217, 205, 205);
+}
+.app{
+    max-width: 800px;
+    margin:0 auto;
+    padding: 30px;
+    text-align: center;
+}
+h1{
+    color: #333;
+    margin-bottom: 20px;
+}
+.search-form{
+    margin-bottom: 30px;
+}
+.search-form input{
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: none;
+
+}
+.search-form button{
+    padding: 10px 30px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    color:#fff;
+    background-color: #333;
+    cursor: pointer;
+}
+.user-card{
+    width: 350px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+}
+.avatar{
+    width: 150px;
+    height: 150px;
+}
+h2{
+    color: #333;
+    margin-bottom: 10px;
+}
+.bio{
+    font-weight: 700;
+    font-size: 30px;
+}
+.login{
+    color: #262323;
+    font-size: 20px;
+}
+.repo-list{
+    margin-top: 30px;
+}
+.repo-list h2{
+    color: #333;
+    margin-bottom: 20px;
+
+}
+.repo-list ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.repo-list ul li{
+    margin-bottom: 30px;
+}
+.repo-list ul li a{
+    text-decoration: none;
+    background-color: #333;   
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pagination li{
+    list-style: none;
+    margin:0 8px;
+}
+.pagination .btn{
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+}

@@ -6,6 +6,7 @@ import SignUp from './Components/SignUp/SignUp';
 import Profile from './Components/Profile';
 import {auth} from "./firebase"
 import { onAuthStateChanged } from 'firebase/auth';
+import Todos from './Components/TodoProject/Todos';
 
 export default function App() {
   const [user,setUser] = useState("")
@@ -27,6 +28,8 @@ export default function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/profile' element={<Profile user={user}/>}/>
+          <Route path='/todo' element={<Todos user={user}/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
